@@ -1,0 +1,21 @@
+name: Sync Resume
+on:
+  workflow_dispatch: # This adds a "Run Now" button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get PDF
+        run: |
+          # This grabs the PDF from the secret link you saved
+          curl -L "${{ secrets.OVERLEAF_PROJECT_URL }}/output.pdf" -o resume.pdf
+
+      - name: Upload to Repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Updated Resume from Overleaf"
+          file_pattern: 'resume.pdf'
