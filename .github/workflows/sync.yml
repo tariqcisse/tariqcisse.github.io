@@ -1,0 +1,4 @@
+      - name: Get PDF
+        run: |
+          # This "tricks" Overleaf into thinking a real person is visiting
+          wget --user-agent="Mozilla/5.0" "${{ secrets.OVERLEAF_PROJECT_URL }}/output.pdf" -O resume.pdf
