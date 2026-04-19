@@ -1,17 +1,20 @@
 name: Sync Resume
 on:
-  workflow_dispatch: # This adds a "Run Now" button
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    # --- ADD THESE 3 LINES ---
+    permissions:
+      contents: write
+    # -------------------------
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Get PDF
         run: |
-          # This grabs the PDF from the secret link you saved
           curl -L "${{ secrets.OVERLEAF_PROJECT_URL }}/output.pdf" -o resume.pdf
 
       - name: Upload to Repo
