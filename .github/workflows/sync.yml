@@ -5,17 +5,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # --- ADD THESE 3 LINES ---
     permissions:
       contents: write
-    # -------------------------
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Get PDF
         run: |
-          curl -L "${{ secrets.OVERLEAF_PROJECT_URL }}/output.pdf" -o resume.pdf
+          # Use -L to follow redirects and -o to name the final file
+          curl -L "${{ secrets.OVERLEAF_PROJECT_URL }}" -o resume.pdf
 
       - name: Upload to Repo
         uses: stefanzweifel/git-auto-commit-action@v5
