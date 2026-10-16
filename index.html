@@ -32,8 +32,8 @@
       background-attachment: fixed;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
     /* Navigation */
@@ -49,6 +49,7 @@
       color: #f5f5f5;
       text-decoration: underline;
       font-weight: bold;
+      font-size: 15px;
       padding-top: 22px;
       padding-bottom: 22px;
     }
@@ -61,9 +62,9 @@
     /* Main page layout */
     .page-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+      grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.8fr);
       align-items: start;
-      gap: 20px;
+      gap: 32px;
       margin-bottom: 40px;
     }
 
@@ -76,7 +77,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
+      gap: 26px;
     }
 
     .right-column {
@@ -85,17 +86,18 @@
       gap: 20px;
     }
 
-    /* Panels: square, straight, and without shadows */
+    /* All panels are borderless and shadow-free */
     .panel-box {
       box-sizing: border-box;
-      border: 3px solid #111;
+      border: none;
       box-shadow: none;
+      border-radius: 0;
       margin: 0;
       min-width: 0;
       transform: none;
     }
 
-    /* Portrait sits directly on the repeating background */
+    /* Portrait: separate from the bio and slightly offset */
     .photo-panel {
       background: transparent;
       border: none;
@@ -103,7 +105,8 @@
       padding: 0;
       width: fit-content;
       max-width: 100%;
-      transform: none;
+      margin-left: 28px;
+      margin-top: 12px;
     }
 
     .photo-panel img {
@@ -111,20 +114,25 @@
       width: 300px;
       max-width: 100%;
       height: auto;
-      border: 2px solid #111;
+      border: none;
+      outline: none;
     }
 
-    /* Black bio panel with white text */
+    /* Narrower, taller black bio panel */
     .bio-panel {
       background: #000;
       color: #fff;
-      padding: 20px 24px;
-      width: 100%;
+      padding: 28px 24px;
+      width: 88%;
+      max-width: 680px;
+      min-height: 320px;
+      font-size: 14px;
+      line-height: 1.8;
       transform: none;
     }
 
     .bio-panel p {
-      margin: 0 0 14px;
+      margin: 0 0 18px;
     }
 
     .bio-panel p:last-child {
@@ -135,26 +143,28 @@
     .contact-panel {
       background: #ffeb3b;
       color: #111;
-      padding: 16px;
+      padding: 18px;
       width: 100%;
+      font-size: 14px;
       transform: none;
     }
 
-    /* Gray LinkedIn panel */
+    /* Green LinkedIn panel */
     .links-panel {
-      background: #dedede;
+      background: #69d17d;
       color: #111;
-      padding: 16px;
+      padding: 14px 18px;
       width: 100%;
+      font-size: 14px;
       transform: none;
     }
 
     .name {
       font-family: "Oswald", Impact, sans-serif;
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 700;
-      line-height: 1.15;
-      margin: 0 0 18px;
+      line-height: 1.2;
+      margin: 0 0 16px;
     }
 
     .contact-panel p {
@@ -183,7 +193,7 @@
 
     .template-credit {
       color: #bbb;
-      font-size: 12px;
+      font-size: 11px;
       text-align: right;
       padding: 0 20px 12px;
     }
@@ -195,7 +205,7 @@
     /* Smaller screens */
     @media (max-width: 767px) {
       body {
-        font-size: 16px;
+        font-size: 14px;
         background-size: 190px auto;
       }
 
@@ -205,7 +215,7 @@
 
       .page-layout {
         grid-template-columns: minmax(0, 1fr);
-        gap: 18px;
+        gap: 24px;
       }
 
       .left-column,
@@ -213,16 +223,25 @@
         gap: 18px;
       }
 
+      .photo-panel {
+        margin-left: 16px;
+        margin-top: 8px;
+      }
+
       .photo-panel img {
-        width: 250px;
+        width: 240px;
       }
 
       .bio-panel {
-        padding: 18px;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        padding: 22px;
+        font-size: 14px;
       }
 
       .name {
-        font-size: 32px;
+        font-size: 29px;
       }
     }
   </style>
@@ -263,25 +282,19 @@
       <main class="left-column">
 
         <section class="panel-box photo-panel">
-          <img src="photo.jpeg" alt="Tariq Cisse">
+          <img src="photo.jpeg" alt="TARIQ CISSE">
         </section>
 
         <section class="panel-box bio-panel">
           <p>
             Currently a Master Student in Biostatistics at the University
             of Washington. I obtained my Bachelor's in Statistics from the
-            University of Toronto (UTSC).
-          </p>
-
-          <p>
-            I enjoy exploring and learning about a range of statistical
-            theory and methods and am generally interested in how they shape
-            clinical areas, particularly in developing designs and
-            methodologies that are robust and interpretable.
-          </p>
-
-          <p>
-            Originally, I am from the Ivory Coast and I grew up in Abidjan.
+            University of Toronto (UTSC). I enjoy exploring and learning
+            about a range of statistical theory and methods and am generally
+            interested in how they shape clinical areas, particularly in
+            developing designs and methodologies that are robust and
+            interpretable. Originally, I am from the Ivory Coast and I grew
+            up in Abidjan.
           </p>
         </section>
 
@@ -331,9 +344,9 @@
 
   </div>
 
-  <div class="template-credit">
+  <!-- <div class="template-credit">
     <a href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
-  </div>
+  </div> -->
 
   <!-- Random repeating background image -->
   <script>
