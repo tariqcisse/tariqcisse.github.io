@@ -118,28 +118,29 @@
       outline: none;
     }
 
-    /* Compact bio panel */
+    /* Compact black bio panel */
     .bio-panel {
       background: #000;
       color: #fff;
-      padding: 22px 24px;
-      width: 88%;
-      max-width: 680px;
+      padding: 18px 20px;
+      width: 82%;
+      max-width: 540px;
       min-height: 0;
       font-size: 14px;
-      line-height: 1.75;
+      line-height: 1.65;
     }
 
     .bio-panel p {
       margin: 0;
     }
 
-    /* Yellow contact panel */
+    /* Yellow name and email panel */
     .contact-panel {
       background: #ffeb3b;
       color: #111;
       padding: 18px;
       width: 100%;
+      max-width: 340px;
       font-size: 14px;
     }
 
@@ -173,7 +174,7 @@
       background: #a7f5ff;
     }
 
-    /* LinkedIn sits at the bottom-right of the page */
+    /* LinkedIn at the bottom-right */
     .linkedin-footer {
       display: flex;
       justify-content: flex-end;
@@ -238,8 +239,13 @@
       .bio-panel {
         width: 100%;
         max-width: none;
-        padding: 20px;
+        min-height: 0;
+        padding: 18px;
         font-size: 14px;
+      }
+
+      .contact-panel {
+        max-width: none;
       }
 
       .name {
