@@ -32,7 +32,7 @@
       background-attachment: fixed;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.6;
     }
 
@@ -49,7 +49,7 @@
       color: #f5f5f5;
       text-decoration: underline;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 14px;
       padding-top: 22px;
       padding-bottom: 22px;
     }
@@ -59,7 +59,7 @@
       background: #a7f5ff;
     }
 
-    /* Main page layout */
+    /* Main layout */
     .page-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.8fr);
@@ -84,9 +84,10 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      min-height: 100%;
     }
 
-    /* All panels are borderless and shadow-free */
+    /* All panels: square corners, no borders or shadows */
     .panel-box {
       box-sizing: border-box;
       border: none;
@@ -97,11 +98,9 @@
       transform: none;
     }
 
-    /* Portrait: separate from the bio and slightly offset */
+    /* Portrait, offset from the bio */
     .photo-panel {
       background: transparent;
-      border: none;
-      box-shadow: none;
       padding: 0;
       width: fit-content;
       max-width: 100%;
@@ -115,28 +114,24 @@
       max-width: 100%;
       height: auto;
       border: none;
+      border-radius: 0;
       outline: none;
     }
 
-    /* Narrower, taller black bio panel */
+    /* Compact bio panel */
     .bio-panel {
       background: #000;
       color: #fff;
-      padding: 28px 24px;
+      padding: 22px 24px;
       width: 88%;
       max-width: 680px;
-      min-height: 320px;
+      min-height: 0;
       font-size: 14px;
-      line-height: 1.8;
-      transform: none;
+      line-height: 1.75;
     }
 
     .bio-panel p {
-      margin: 0 0 18px;
-    }
-
-    .bio-panel p:last-child {
-      margin-bottom: 0;
+      margin: 0;
     }
 
     /* Yellow contact panel */
@@ -146,17 +141,6 @@
       padding: 18px;
       width: 100%;
       font-size: 14px;
-      transform: none;
-    }
-
-    /* Green LinkedIn panel */
-    .links-panel {
-      background: #69d17d;
-      color: #111;
-      padding: 14px 18px;
-      width: 100%;
-      font-size: 14px;
-      transform: none;
     }
 
     .name {
@@ -164,6 +148,8 @@
       font-size: 32px;
       font-weight: 700;
       line-height: 1.2;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
       margin: 0 0 16px;
     }
 
@@ -185,6 +171,23 @@
     a:hover {
       color: #111;
       background: #a7f5ff;
+    }
+
+    /* LinkedIn sits at the bottom-right of the page */
+    .linkedin-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin: 30px 0 24px;
+    }
+
+    .links-panel {
+      background: #69d17d;
+      color: #111;
+      padding: 14px 18px;
+      width: fit-content;
+      min-width: 130px;
+      text-align: center;
+      font-size: 14px;
     }
 
     .links-panel a {
@@ -235,13 +238,16 @@
       .bio-panel {
         width: 100%;
         max-width: none;
-        min-height: 0;
-        padding: 22px;
+        padding: 20px;
         font-size: 14px;
       }
 
       .name {
         font-size: 29px;
+      }
+
+      .linkedin-footer {
+        margin-top: 24px;
       }
     }
   </style>
@@ -276,6 +282,7 @@
 
   <!-- Page Content -->
   <div class="container">
+
     <div class="page-layout">
 
       <!-- Left column: portrait and bio -->
@@ -300,17 +307,13 @@
 
       </main>
 
-      <!-- Right column: contact and links -->
+      <!-- Right column: contact -->
       <aside class="right-column">
 
         <section class="panel-box contact-panel">
-          <h1 class="name">Tariq Cisse</h1>
+          <h1 class="name">TARIQ CISSE</h1>
           <p>cissetariq@gmail.com</p>
           <p>cissetar@uw.edu</p>
-        </section>
-
-        <section class="panel-box links-panel">
-          <a href="https://www.linkedin.com/in/tariq-cisse/">LinkedIn</a>
         </section>
 
       </aside>
@@ -342,11 +345,18 @@
     </section>
     -->
 
+    <!-- LinkedIn at the bottom-right -->
+    <div class="linkedin-footer">
+      <section class="panel-box links-panel">
+        <a href="https://www.linkedin.com/in/tariq-cisse/">LinkedIn</a>
+      </section>
+    </div>
+
   </div>
 
-  <!-- <div class="template-credit">
+  <div class="template-credit">
     <a href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
-  </div> -->
+  </div>
 
   <!-- Random repeating background image -->
   <script>
