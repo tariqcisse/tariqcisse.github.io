@@ -7,7 +7,7 @@
 -->
 <html lang="en">
 <head>
-  <title>Tariq Cisse</title>
+  <title>TARIQ CISSE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -85,35 +85,39 @@
       gap: 20px;
     }
 
-    /* Individual panels */
+    /* Panels: square, straight, and without shadows */
     .panel-box {
       box-sizing: border-box;
       border: 3px solid #111;
-      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.8);
+      box-shadow: none;
       margin: 0;
       min-width: 0;
+      transform: none;
     }
 
+    /* Portrait sits directly on the repeating background */
     .photo-panel {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  width: fit-content;
-  max-width: 100%;
-  transform: none;
-}
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      width: fit-content;
+      max-width: 100%;
+      transform: none;
+    }
 
     .photo-panel img {
       display: block;
-      width: 260px;
+      width: 300px;
       max-width: 100%;
       height: auto;
       border: 2px solid #111;
     }
 
+    /* Black bio panel with white text */
     .bio-panel {
-      background: #a7f5ff;
+      background: #000;
+      color: #fff;
       padding: 20px 24px;
       width: 100%;
       transform: none;
@@ -127,18 +131,21 @@
       margin-bottom: 0;
     }
 
-    .contact-panel,
-    .links-panel {
-      background: #dedede;
+    /* Yellow contact panel */
+    .contact-panel {
+      background: #ffeb3b;
+      color: #111;
       padding: 16px;
       width: 100%;
-    }
-
-    .contact-panel {
       transform: none;
     }
 
+    /* Gray LinkedIn panel */
     .links-panel {
+      background: #dedede;
+      color: #111;
+      padding: 16px;
+      width: 100%;
       transform: none;
     }
 
@@ -207,7 +214,7 @@
       }
 
       .photo-panel img {
-        width: 230px;
+        width: 250px;
       }
 
       .bio-panel {
@@ -328,6 +335,7 @@
     <a href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
   </div>
 
+  <!-- Random repeating background image -->
   <script>
     const backgroundImages = [
       "05d73f49-e592-4738-8f2d-8c1cb3125d4b.jpeg",
