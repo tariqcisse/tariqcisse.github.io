@@ -18,6 +18,171 @@ We are borrowing this template for use with the capstone program
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/x-icon" href="./favicon.svg">
 
+	
+<style>
+/* CHAOTIC PERSONAL HOMEPAGE */
+
+/* The overall canvas */
+html {
+    background: #f5e7c8;
+}
+
+body {
+    background-color: #f5e7c8;
+    background-image:
+        radial-gradient(#292929 0.7px, transparent 0.7px);
+    background-size: 13px 13px;
+    color: #171717;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Loud, oversized navigation */
+.navbar.navbar-inverse {
+    background: #ff4fa3 !important;
+    border: 4px solid #171717 !important;
+    border-radius: 0 !important;
+    margin: 14px 3% 30px;
+    box-shadow: 8px 8px 0 #171717;
+    transform: rotate(-0.6deg);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #171717 !important;
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background: #eaff52 !important;
+    color: #171717 !important;
+    transform: rotate(2deg);
+}
+
+/* Main page layout */
+.container {
+    width: 94%;
+    max-width: 1250px;
+}
+
+.row {
+    position: relative;
+}
+
+/* Your existing photo */
+img.img-responsive {
+    width: 65%;
+    max-width: 420px;
+    border: 5px solid #171717;
+    padding: 8px;
+    background: #eaff52;
+    box-shadow: 12px 12px 0 #ff4fa3;
+    transform: rotate(2deg);
+    margin-bottom: 24px;
+}
+
+/* Your biography */
+.col-md-8 {
+    background: #a9d4ff;
+    border: 4px solid #171717;
+    padding: 26px !important;
+    box-shadow: 10px 10px 0 #171717;
+    transform: rotate(-0.5deg);
+    margin-bottom: 32px;
+}
+
+.col-md-8 p {
+    text-align: left !important;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Your name and contact information */
+.col-md-4 {
+    background: #eaff52;
+    border: 4px solid #171717;
+    padding: 22px !important;
+    margin-bottom: 22px;
+    box-shadow: 7px 7px 0 #ff4fa3;
+}
+
+.col-md-4 div[style*="font-family"] {
+    font-family: Georgia, serif !important;
+    font-size: 38px !important;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+/* Links should look like links */
+a {
+    color: #b50042;
+    font-weight: bold;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #171717 !important;
+    background: #ff4fa3;
+}
+
+/* Alternating, overlapping-looking panels */
+.col-md-4:nth-of-type(2) {
+    background: #ffbd59;
+    transform: rotate(1.5deg);
+}
+
+.col-md-4:nth-of-type(3) {
+    background: #d6b7ff;
+    transform: rotate(-1deg);
+}
+
+/* The small template credit */
+body > a[style*="float:right"] {
+    display: inline-block;
+    background: #171717;
+    color: #eaff52 !important;
+    padding: 8px 14px;
+    margin: 25px;
+    transform: rotate(-3deg);
+}
+
+/* Mobile: keep the chaos, not the horizontal scrolling */
+@media (max-width: 767px) {
+    .navbar.navbar-inverse {
+        margin: 12px 3% 25px;
+    }
+
+    .container {
+        width: 91%;
+    }
+
+    .col-md-8,
+    .col-md-4 {
+        width: 100%;
+        height: auto !important;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    img.img-responsive {
+        width: 85%;
+        max-width: 100%;
+    }
+
+    .col-md-8 p {
+        font-size: 16px;
+    }
+}
+</style>
+
 </head>
 <body>
 
